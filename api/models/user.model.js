@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { string } from "prop-types";
 
 const userSchema = new mongoose.Schema(
   {
