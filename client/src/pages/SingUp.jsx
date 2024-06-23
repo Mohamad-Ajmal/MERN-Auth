@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 export default function SingUp() {
   const [formDate, setFormFate] = useState({});
   const [error, setError] = useState(false);
   const [loding, setLoding] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleChange = (e) =>{
     setFormFate({...formDate, [e.target.id]: e.target.value});
@@ -28,6 +30,8 @@ export default function SingUp() {
         setError(true);
         return;
       }
+
+      navigate('/sign-in');
 
     } catch (error) {
       setLoding(false);
