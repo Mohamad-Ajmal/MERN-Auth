@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
+import OAuth from '../components/OAuth'
 
 export default function SingUp() {
   const [formDate, setFormFate] = useState({});
@@ -52,6 +53,7 @@ export default function SingUp() {
         <input type="Email" placeholder='Email' id='email' className='bg-slate-100 p-3 rounded-lg' onChange={handleChange}/>
         <input type="password" placeholder='password' id='password' className='bg-slate-100 p-3 rounded-lg' onChange={handleChange}/>
         <button disabled={loding} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'> {loding ? 'Loding...' : 'Sign Up'}</button>
+      <OAuth />
       </form>
       <div className='flex gap-2 mt-5'>
         <p>Have an account ?</p>
