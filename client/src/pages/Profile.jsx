@@ -96,7 +96,6 @@ const handleDeleteAccount = async () =>{
       return;
     }
     dispatch(deleteUserSuccess());
-
   } catch (error) {
     dispatch(deleteUserFailure());
   }
